@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Play Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f0f0;
+    }
+    a.play-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+    }
+    a.play-link:hover {
+      background-color: #0056b3;
+    }
+    #videoFrame {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#" class="play-link" onclick="playVideo()">▶️ Click here to play video</a>
+
+  <div id="videoFrame">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function playVideo() {
+      document.querySelector('.play-link').style.display = 'none';
+      document.getElementById('videoFrame').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
